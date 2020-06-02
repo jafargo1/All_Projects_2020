@@ -1,6 +1,5 @@
 package Chapter_4;
 
-
 import java.sql.Connection;
 
 import java.sql.Statement;
@@ -15,18 +14,17 @@ import java.sql.SQLException;
 
 public class DisplayAuthors {
 
-// JDBC driver name and database URL
     static final String DRIVER = "sun.jdbc.odbc.JdbcOdbcDriver";
 
     static final String DATABASE_URL = "jdbc:odbc:Books";
 
     public static void main(String args[]) {
 
-        Connection connection = null; // manages connection
+        Connection connection = null;
 
-        Statement statement = null; // query statement
+        Statement statement = null;
 
-        ResultSet resultSet = null; // manages results
+        ResultSet resultSet = null;
 
         try {
 
@@ -56,17 +54,13 @@ public class DisplayAuthors {
                 }
                 System.out.println();
 
-            } // end while
+            }
 
-        } // end try
-        catch (SQLException sqlException) {
+        } catch (SQLException sqlException) {
             sqlException.printStackTrace();
-        } // end catch
-        catch (ClassNotFoundException classNotFound) {
+        } catch (ClassNotFoundException classNotFound) {
             classNotFound.printStackTrace();
-        } // end catch
-        finally // ensure resultSet, statement and connection are closed
-        {
+        } finally {
 
             try {
 
@@ -76,15 +70,13 @@ public class DisplayAuthors {
 
                 connection.close();
 
-            } // end try   
-            catch (Exception exception) {
+            } catch (Exception exception) {
 
                 exception.printStackTrace();
 
-            } // end catch   
+            }
+        }
 
-        } // end finally   
+    }
 
-    } // end main
-
-} // end class DisplayAuthors
+}
