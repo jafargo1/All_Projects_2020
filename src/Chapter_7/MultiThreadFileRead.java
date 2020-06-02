@@ -6,9 +6,7 @@ public class MultiThreadFileRead {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Thread thread1 = new Th
-                
-                read(new Runnable() { 
+        Thread thread1 = new Thread(new Runnable() { 
             public void run() {
                 System.out.print("The thread - 1");
                 try {
