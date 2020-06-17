@@ -1,4 +1,4 @@
-package Chapter_4;
+package Chapter_6;
 
 
 import javafx.beans.property.SimpleIntegerProperty;
