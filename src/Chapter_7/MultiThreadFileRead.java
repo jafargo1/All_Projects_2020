@@ -1,3 +1,5 @@
+package Chapter_7;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -10,7 +12,7 @@ public class MultiThreadFileRead {
             public void run() {
                 System.out.print("The thread - 1");
                 try {
-                    Scanner sc1 = new Scanner(new File("C:\\copy_customers_and_contacts.txt"));
+                    Scanner sc1 = new Scanner(new File("C:\\copy_customers_and_contacts1.txt"));
                     while(sc1.hasNextLine()){
 
                         System.out.println(sc1.nextLine() + " : thread 1");
@@ -26,7 +28,7 @@ public class MultiThreadFileRead {
             public void run() {
                 System.out.println("The thread -2");
                 try {
-                    Scanner sc1 = new Scanner(new File("C:\\customers_and_contacts.txt"));
+                    Scanner sc1 = new Scanner(new File("C:\\customers_and_contacts2.txt"));
                     while(sc1.hasNextLine()){
                         System.out.println(sc1.nextLine() + " : thread 2");
                     }
